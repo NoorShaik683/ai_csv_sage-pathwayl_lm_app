@@ -9,7 +9,7 @@ def prompt(index, embedded_query, user_query):
     def build_prompt(local_indexed_data, query):
         docs_str = "\n".join(local_indexed_data)
         print(docs_str)
-        prompt = f"Given the following data: \n {docs_str} \nanswer this query: {query}"
+        prompt = f"Given the following SQL Schema: \n {docs_str} \nGenerate a SQL query without explanation for following prompt: {query}"
         return prompt
     
     query_context = embedded_query + index.get_nearest_items(

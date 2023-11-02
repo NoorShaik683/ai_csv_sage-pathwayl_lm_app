@@ -6,7 +6,7 @@ from common.prompt import prompt
 from llm_app import chunk_texts, extract_texts
 load_dotenv()
 
-dropbox_folder_path = os.environ.get("DROPBOX_LOCAL_FOLDER_PATH", "")
+sql_schema_path = os.environ.get("SQL_DATABASE_SCHEMA_PATH", "")
 
 
 def run(host, port):
@@ -20,7 +20,7 @@ def run(host, port):
 
     # Real-time data coming from external unstructured data sources like a PDF file
     input_data = pw.io.fs.read(
-        dropbox_folder_path,
+        sql_schema_path,
         mode="streaming",
         format="binary",
         autocommit_duration_ms=50,
