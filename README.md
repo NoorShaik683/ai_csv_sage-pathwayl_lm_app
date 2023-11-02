@@ -1,6 +1,10 @@
 # AI-CSV Sage : AI-Enabled CSV Reports
 
+## Demo
 
+See how the tool works:
+
+![AI CSV SAGE  tool demo](assets/ai_csv_sage.mp4)
 
 ### Prerequisites
 
