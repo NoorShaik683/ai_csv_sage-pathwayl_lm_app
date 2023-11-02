@@ -1,5 +1,7 @@
 # AI-CSV Sage : AI-Enabled CSV Reports
 
+AI-CSV Sage is a powerful tool designed to streamline and simplify the process of generating CSV reports from large databases using the capabilities of artificial intelligence (AI). With AI-CSV Sage, users can provide a brief description of the specific reports they require, including details about the data elements, criteria, and any specific information of interest. The tool leverages AI and large language models to intelligently interpret and execute these requests, tailoring the reports to meet the user's needs
+
 ## Demo
 
 See how the tool works:
