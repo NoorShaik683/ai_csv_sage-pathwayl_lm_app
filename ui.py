@@ -6,34 +6,7 @@ import sqlite3
 import csv
 
 
-css = """
-<style>
-.i-button-container {
-    display: flex;
-    align-items: center;
-}
-.i-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    margin-left: 5px;
-}
-.i-description {
-    display: none;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.i-button-container:hover .i-description {
-    display: block;
-}
-</style>
-"""
-
 # Add the custom CSS to the Streamlit app
-st.markdown(css, unsafe_allow_html=True)
 
 # Load environment variables
 load_dotenv()
@@ -46,8 +19,11 @@ sql_db_path = os.environ.get("SQL_DATABASE_FILE_PATH","")
 st.title("AI-CSV Sage : AI-Enabled CSV Reports")
 
 description_expander = st.expander("About", expanded=False)
-description_expander.write("AI-CSV Sage is a powerful tool designed to streamline and simplify the process of generating CSV reports from large databases using the capabilities of artificial intelligence (AI). With AI-CSV Sage, users can provide a brief description of the specific reports they require, including details about the data elements, criteria, and any specific information of interest. The tool leverages AI and large language models to intelligently interpret and execute these requests, tailoring the reports to meet the user's needs.""\n\nPlease note: AI-CSV Sage is currently developed specifically for SQLite3 databases.")
-
+description_content = (
+    "AI-CSV Sage is a powerful tool designed to streamline and simplify the process of generating CSV reports from large databases using the capabilities of artificial intelligence (AI). With AI-CSV Sage, users can provide a brief description of the specific reports they require, including details about the data elements, criteria, and any specific information of interest. The tool leverages AI and large language models to intelligently interpret and execute these requests, tailoring the reports to meet the user's needs."
+    "\n\nPlease note: AI-CSV Sage is currently developed specifically for SQLite3 databases."
+)
+description_expander.write(description_content)
 # Show or hide the description when the "i" button is clicked
 description_expander.expanded = not description_expander.expanded
 
