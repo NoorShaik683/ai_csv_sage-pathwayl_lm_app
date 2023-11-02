@@ -4,7 +4,7 @@
 
 See how the tool works:
 
-![AI CSV SAGE  tool demo](assets/ai_csv_sage.mp4)
+![ai-csv-sage tool demo](assets/ai_csv_sage.mp4)
 
 ### Prerequisites
 
