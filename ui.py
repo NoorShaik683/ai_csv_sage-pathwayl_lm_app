@@ -52,7 +52,7 @@ if question:
                 cursor = db_connection.cursor()
 
                 # Execute SQL commands
-                cursor.execute(final_response)
+                cursor.execute(str(response.json()))
                 data = cursor.fetchall()
                 f.write('\nDatabase  :\n' + str(data)+"---> \nData Type : "+ str(type(data)))
                 with open('reports/report.csv', 'w', newline='') as file:
@@ -75,7 +75,7 @@ if question:
                     file_name='generated_report.csv'  # Specify the file name and extension
                 )
             except Exception as e:
-                st.error(f'We can not generate a Excel file for your request. Please change or modify the question.\n Error : {e}')
+                st.error(f'We can not generate a Excel file for your request. Please change or modify the question.\n Error : {e} {str(response.json())}, {sql_db_path}')
 
         else:
             st.error(f"Failed to send data to Pathway API. Status code: {response.status_code}")
